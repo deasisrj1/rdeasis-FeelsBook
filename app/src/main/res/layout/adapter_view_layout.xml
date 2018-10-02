@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.3"
+            android:orientation="vertical">
+
+            <TextView
+                android:focusable="false"
+                android:id="@+id/emotionName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="33.3"
+                android:gravity="center"
+                android:text="@string/header"
+                android:textAlignment="center" />
+
+            <TextView
+
+                android:id="@+id/emotionDate"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="33.3"
+                android:gravity="center"
+                android:text="@string/date"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="66.6"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/commentButton"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/CommentButton"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/edit"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

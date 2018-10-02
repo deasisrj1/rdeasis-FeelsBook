@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FeelsBook</string>
+    <string name="love">Love</string>
+    <string name="joy">Joy</string>
+    <string name="anger">Anger</string>
+    <string name="surprise">Surprise</string>
+    <string name="sadness">Sadness</string>
+    <string name="fear">Fear</string>
+    <string name="header">How are you feeling?</string>
+    <string name="comment">Add comment here...</string>
+    <string name="history">History</string>
+    <string name="count">Count</string>
+    <string name="edit">Edit</string>
+    <string name="date">Date</string>
+    <string name="CommentButton">Comment</string>
+    <string name="textview">TextView</string>
+</resources>
