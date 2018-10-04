@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadFromFile() {
         try {
-            Log.d("SAVINGLOADING","im re loaded");
+            
             FileInputStream fis = openFileInput(FILENAME);
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader reader = new BufferedReader(isr);
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
      private void saveInFile() {
         try{
-            Log.d("SAVINGLOADING","im re loading");
+
             FileOutputStream fos = openFileOutput(FILENAME, 0);
             OutputStreamWriter osw = new OutputStreamWriter(fos);
             BufferedWriter writer = new BufferedWriter(osw);
