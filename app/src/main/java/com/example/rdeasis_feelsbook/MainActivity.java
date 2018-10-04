@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         loadFromFile();
+
     }
 
     private void loadFromFile() {
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void saveInFile() {
+     private void saveInFile() {
         try{
             Log.d("SAVINGLOADING","im re loading");
             FileOutputStream fos = openFileOutput(FILENAME, 0);

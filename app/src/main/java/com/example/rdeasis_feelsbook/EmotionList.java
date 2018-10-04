@@ -41,6 +41,7 @@ public class EmotionList {
     // returns the number of occurrences of each recorded Emotion
     public Integer getOccurrences (String emotionName) {
         int occurrences = Collections.frequency(emotionCount, emotionName);
+
         return occurrences;
     }
 

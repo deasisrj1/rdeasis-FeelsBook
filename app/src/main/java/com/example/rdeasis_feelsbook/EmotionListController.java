@@ -36,6 +36,7 @@ public class EmotionListController  {
 
     // returns the number of occurrences of an emotion
     public Integer getOccurrence(String emotionName) {
+
         return getEmotionList().getOccurrences(emotionName);
     }
 
