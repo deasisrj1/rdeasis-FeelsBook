@@ -63,7 +63,8 @@ public class Edit extends AppCompatActivity implements TimePickerDialog.OnTimeSe
         EmotionListController elc = new EmotionListController();
         elc.deleteEmotion(emotion, position);
 
-        Intent intent = new Intent(this, History.class);
+
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
     }

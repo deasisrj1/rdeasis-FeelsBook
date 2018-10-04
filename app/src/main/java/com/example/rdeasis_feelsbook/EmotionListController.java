@@ -45,7 +45,7 @@ public class EmotionListController  {
             }
         }
         return count;
-        
+
     }
 
     // removes the selected emotion from the list

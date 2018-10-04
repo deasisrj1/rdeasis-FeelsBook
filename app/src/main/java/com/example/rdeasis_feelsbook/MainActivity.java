@@ -116,7 +116,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        loadFromFile();
+        emotions = EmotionListController.getEmotionList().getEmotions();
+        if (emotions.isEmpty() ){
+            saveInFile();
+            loadFromFile();
+        } else {
+            emotions = EmotionListController.getEmotionList().getEmotions();
+            saveInFile();
+        }
 
     }
 
@@ -156,6 +163,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public void reSaveFiles() {
+        emotions = EmotionListController.getEmotionList().getEmotions();
+        this.saveInFile();
     }
 
 
