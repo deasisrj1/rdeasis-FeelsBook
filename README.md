@@ -25,3 +25,6 @@ Time picker
 https://www.youtube.com/watch?v=QMwaNN_aM3U
 
 
+https://developer.android.com/
+
+https://stackoverflow.com/
