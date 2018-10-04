@@ -117,14 +117,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         emotions = EmotionListController.getEmotionList().getEmotions();
-        if (emotions.isEmpty() ){
-            saveInFile();
+        if (emotions.isEmpty()) {
             loadFromFile();
         } else {
             emotions = EmotionListController.getEmotionList().getEmotions();
             saveInFile();
         }
-
+        loadFromFile();
     }
 
     private void loadFromFile() {
@@ -164,12 +163,5 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-    public void reSaveFiles() {
-        emotions = EmotionListController.getEmotionList().getEmotions();
-        this.saveInFile();
-    }
-
-
 
 }

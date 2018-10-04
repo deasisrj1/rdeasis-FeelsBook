@@ -41,7 +41,6 @@ public class Edit extends AppCompatActivity implements TimePickerDialog.OnTimeSe
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         Bundle extras = getIntent().getExtras();
-        Emotion emotion = (Emotion) extras.getSerializable("emotion");
         int position = extras.getInt("position");
 
         EmotionListController elc = new EmotionListController();
@@ -50,6 +49,9 @@ public class Edit extends AppCompatActivity implements TimePickerDialog.OnTimeSe
 
         TextView textView = (TextView) findViewById(R.id.emotionsDate);
         textView.setText(elc.getTime(position).toString());
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
     }
 
@@ -64,7 +66,7 @@ public class Edit extends AppCompatActivity implements TimePickerDialog.OnTimeSe
         elc.deleteEmotion(emotion, position);
 
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, History.class);
         startActivity(intent);
 
     }

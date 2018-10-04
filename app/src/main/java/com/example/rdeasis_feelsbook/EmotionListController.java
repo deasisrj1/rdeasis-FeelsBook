@@ -53,8 +53,5 @@ public class EmotionListController  {
         getEmotionList().deleteEmotion(emotion, position);
     }
 
-   // public void setEmotionList(ArrayList<Emotion> emotions) {
-     //   emotionList.setEmotionList(emotions);
-    //}
 
 }
