@@ -36,8 +36,16 @@ public class EmotionListController  {
 
     // returns the number of occurrences of an emotion
     public Integer getOccurrence(String emotionName) {
+        int count = 0;
+        ArrayList<Emotion> emotions = getEmotionList().getEmotions();
 
-        return getEmotionList().getOccurrences(emotionName);
+        for( Emotion emotion: emotions){
+            if(emotion.getEmotionName().matches(emotionName)){
+                count++;
+            }
+        }
+        return count;
+        
     }
 
     // removes the selected emotion from the list

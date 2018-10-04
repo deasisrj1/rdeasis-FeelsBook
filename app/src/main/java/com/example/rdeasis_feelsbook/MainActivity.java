@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadFromFile() {
         try {
-            
+
             FileInputStream fis = openFileInput(FILENAME);
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader reader = new BufferedReader(isr);
