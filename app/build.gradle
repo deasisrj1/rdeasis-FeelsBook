@@ -9,7 +9,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
+
+    dependencies {
+        implementation 'com.google.code.gson:gson:2.8.2'}
+
     buildTypes {
         release {
             minifyEnabled false

@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class History extends AppCompatActivity {
 
@@ -20,20 +22,26 @@ public class History extends AppCompatActivity {
 
 
         final ListView listView = (ListView) findViewById(R.id.listView);
+        ArrayList<Emotion> emotions = EmotionListController.getEmotionList().getEmotions();
 
-        final ArrayList<Emotion> emotions = EmotionListController.getEmotionList().getEmotions();
-
-        EmotionListAdapter adapter = new EmotionListAdapter(this, R.layout.adapter_view_layout, emotions);
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // sorts emotions date in order
+        Collections.sort(emotions, new Comparator<Emotion>() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("Printer", "printed");
-                Intent intent = new Intent(view.getContext(), Count.class);
-                startActivity(intent);
+            public int compare(Emotion o1, Emotion o2) {
+
+                return o1.getDate().compareTo(o2.getDate());
             }
         });
+
+        // inflates the ListView of history
+        final EmotionListAdapter adapter = new EmotionListAdapter(this, R.layout.adapter_view_layout, emotions);
+        listView.setAdapter(adapter);
+
+
+
+        listView.invalidateViews();
+
+        adapter.notifyDataSetChanged();
 
 
     }

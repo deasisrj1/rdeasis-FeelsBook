@@ -14,4 +14,6 @@
     <string name="date">Date</string>
     <string name="CommentButton">Comment</string>
     <string name="textview">TextView</string>
+    <string name="deleteButton">Delete Emotion</string>
+    <string name="timeButton">set time</string>
 </resources>

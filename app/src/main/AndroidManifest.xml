@@ -22,7 +22,10 @@
         <activity
             android:name=".Count"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Comment"></activity>
+        <activity
+            android:name=".Comment"
+            android:parentActivityName=".History" />
+        <activity android:name=".Edit" android:parentActivityName=".History"></activity>
     </application>
 
 </manifest>
